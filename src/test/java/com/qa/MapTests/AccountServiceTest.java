@@ -1,10 +1,8 @@
 package com.qa.MapTests;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
-import org.junit.Assert;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 
 import com.qa.persistence.domain.Account;
@@ -112,23 +110,67 @@ public class AccountServiceTest {
 		assertEquals(jsonAccount, stringToTest);
 
 	}
-
-	@Test
-	@Ignore
-	public void getCountForFirstNamesInAccountWhenZeroOccurances() {
-
-	}
-
-	@Test
-	@Ignore
-	public void getCountForFirstNamesInAccountWhenOne() {
-
-	}
-
-	@Test
-	@Ignore
-	public void getCountForFirstNamesInAccountWhenTwo() {
-
-	}
-
 }
+// @Test
+// public void firstNameFinder() {
+// String name = "John";
+//
+// amr.createAccount(jsonUtil.getJSONForObject(acc1));
+// amr.createAccount(jsonUtil.getJSONForObject(acc2));
+// amr.updateAccount(1,
+// "{\"id\":1,\"accountNumber\":\"D0001\",\"firstName\":\"John\",\"lastName\":\"Harris\"}");
+// amr.updateAccount(2,
+// "{\"id\":1,\"accountNumber\":\"D0001\",\"firstName\":\"John\",\"lastName\":\"Smith\"}");
+// int counter = amr.findName(name);
+//
+// assertTrue(counter > 0);
+//
+// }
+//
+// @Test
+//
+// public void getCountForFirstNamesInAccountWhenZeroOccurances() {
+// String name = "Phillis";
+//
+// amr.createAccount(jsonUtil.getJSONForObject(acc1));
+// amr.createAccount(jsonUtil.getJSONForObject(acc2));
+// amr.updateAccount(1,
+// "{\"id\":1,\"accountNumber\":\"D0001\",\"firstName\":\"John\",\"lastName\":\"Harris\"}");
+// amr.updateAccount(2,
+// "{\"id\":1,\"accountNumber\":\"D0001\",\"firstName\":\"John\",\"lastName\":\"Smith\"}");
+// int counter = amr.findName(name);
+//
+// assertEquals(0, counter);
+// }
+//
+// @Test
+// public void getCountForFirstNamesInAccountWhenOne() {
+// String name = "John";
+//
+// amr.createAccount(jsonUtil.getJSONForObject(acc1));
+// amr.createAccount(jsonUtil.getJSONForObject(acc2));
+// amr.updateAccount(1,
+// "{\"id\":1,\"accountNumber\":\"D0001\",\"firstName\":\"John\",\"lastName\":\"Harris\"}");
+// amr.updateAccount(2,
+// "{\"id\":1,\"accountNumber\":\"D0001\",\"firstName\":\"Dohn\",\"lastName\":\"Smith\"}");
+// int counter = amr.findName(name);
+//
+// assertEquals(1, counter);
+// }
+//
+// @Test
+// public void getCountForFirstNamesInAccountWhenTwo() {
+//
+// String name = "John";
+//
+// amr.createAccount(jsonUtil.getJSONForObject(acc1));
+// amr.createAccount(jsonUtil.getJSONForObject(acc2));
+// amr.updateAccount(1,
+// "{\"id\":1,\"accountNumber\":\"D0001\",\"firstName\":\"John\",\"lastName\":\"Harris\"}");
+// amr.updateAccount(2,
+// "{\"id\":1,\"accountNumber\":\"D0001\",\"firstName\":\"John\",\"lastName\":\"Smith\"}");
+// int counter = amr.findName(name);
+//
+// assertEquals(2, counter);
+// }
+// }
