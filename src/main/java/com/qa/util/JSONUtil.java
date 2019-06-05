@@ -16,12 +16,15 @@ public class JSONUtil {
 	}
 
 	public String getJSONForObject(Object obj) {
+
 		try {
 			return json.writeValueAsString(obj);
 		} catch (JsonProcessingException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return null;
+
 	}
 
 	public <T> T getObjectForJSON(String jsonString, Class<T> clazz) {
