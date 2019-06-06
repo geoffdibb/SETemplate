@@ -14,7 +14,7 @@ import com.qa.util.JSONUtil;
 
 @Default
 @Transactional(TxType.SUPPORTS)
-public class TransactionalRepo implements AccountRepository {
+public class TransactionalRepo implements AccountRepository, BusinessLogic {
 
 	@PersistenceContext(unitName = "primary")
 
@@ -45,7 +45,6 @@ public class TransactionalRepo implements AccountRepository {
 		return "Account made";
 	}
 
-	@Override
 	@Transactional(TxType.REQUIRED)
 	public String deleteAccount(int accountNumber) {
 		em.remove(em.find(Account.class, accountNumber));
@@ -58,6 +57,17 @@ public class TransactionalRepo implements AccountRepository {
 		Account newAccount = new JSONUtil().getObjectForJSON(account, Account.class);
 		em.persist(newAccount);
 		return null;
+	}
+
+	@Override
+	public String CreateBannedAccount(String account) {
+		Account newAccount = new JSONUtil().getObjectForJSON(account, Account.class);
+		if (account == "9999") {
+			return "User is banned";
+		}
+		em.persist(newAccount);
+
+		return "Account made";
 	}
 
 }
