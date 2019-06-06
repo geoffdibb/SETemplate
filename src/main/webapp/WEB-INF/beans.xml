@@ -6,6 +6,6 @@
       http://xmlns.jcp.org/xml/ns/javaee/beans_1_1.xsd" bean-discovery-mode="all">
       
        <alternatives>
-        <class>com.qa.service.repository.AccountMapRepository</class>
+        <class>com.qa.persistence.repository.AccountMapRepository</class>
     </alternatives> 
 </beans>
