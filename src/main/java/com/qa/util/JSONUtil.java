@@ -20,7 +20,6 @@ public class JSONUtil {
 		try {
 			return json.writeValueAsString(obj);
 		} catch (JsonProcessingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return null;
